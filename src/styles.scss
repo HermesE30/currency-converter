@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   /* Colors */
   --app-background: #EEEEEE;
@@ -7,24 +13,40 @@
   --card-background: #FFFFFF;
   --card-header-background: #F6F6F6;
   --button-background: #F6F6F6;
+  --button-hover-background: #efefef;
+
+  --loader-color-primary: #717171;
 
   --text-color-primary: #717171;
   --text-color-secondary: #919191;
   --text-success: #3C7649;
-  --text-danger: #3684CB;
-  --text-info: #DD4B4B;
-
+  --text-danger: #DD4B4B;
+  --text-info: #3684CB;
   /* Shadows */
   --shadow: 0px 0px 6px 2px rgba(204, 204, 204, 0.25);
 
   /* fonts */
-  --card-title-size: 0.875rem;
-  --card-title-weight: 400;
-  --card-tilte-spacing: 0.25px;
+  --card-title-size: 1.875rem;
+  --card-title-weight: 700;
 
-  --card-currency-value-size: 0.875rem;
-  --card-currency-value-weight: 400;
-  --card-currency-value-spacing: 0.25px;
+  --card-currency-value-size: 4rem;
+  --card-currency-value-weight: 500;
+
+  --card-footer-title-size: 1.125rem;
+  --card-footer-title-weight: 600;
+
+  --card-footer-value-size: 1.5rem;
+  --card-footer-value-weight: 600;
+
+  --card-error-title-size: 1.625rem;
+  --card-error-title-weight: 400;
+
+  --button-label-size: 1.125rem;
+  --button-label-weight: 600;
+
+  /* Dimens  */
+  --border-radius: 0.625rem;
+  --header-height: 6.25rem;
 }
 
 body {
@@ -33,7 +55,9 @@ body {
 
 html,
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }

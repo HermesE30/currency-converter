@@ -1,0 +1,119 @@
+.card-container {
+  width: 26.875rem;
+  height: 26.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background: var(--card-background);
+  box-shadow: var(--shadow);
+}
+
+.card-header {
+  width: 100%;
+  min-height: 119px;
+  max-height: 119px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-header-background);
+}
+
+.card-title {
+  font-size: var(--card-title-size);
+  font-weight: var(--card-title-weight);
+  color: var(--text-color-primary);
+}
+
+
+.card-body {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.card-currency-value {
+  font-size: var(--card-currency-value-size);
+  font-weight: var(--card-currency-value-weight);
+}
+
+.card-currency-value-danger {
+  color: var(--text-danger);
+}
+
+.card-currency-value-success {
+  color: var(--text-success);
+}
+
+.card-currency-value-info {
+  color: var(--text-info);
+}
+
+.card-footer {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 110px;
+  max-height: 110px;
+
+
+}
+
+.card-footer-item-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 0.5px solid #CCCCCC;
+
+}
+
+.footer-title {
+  color: var(--text-color-secondary);
+  font-size: var(--card-footer-title-size);
+  font-weight: var(--card-footer-title-weight);
+}
+
+.footer-value {
+  color: var(--text-color-primary);
+  font-size: var(--card-footer-value-size);
+  font-weight: var(--card-footer-value-weight);
+}
+
+.card-footer-item-container:nth-child(odd) {
+  border-right: 0.5px solid #CCCCCC;
+}
+
+.card-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+}
+
+.card-error-info {
+  color: var(--text-color-primary);
+  font-size: var(--card-error-title-size);
+  font-weight: var(--card-error-title-weight);
+}
+
+// @media (max-width: 537px) {
+//   .card-container {
+//     width: 20rem;
+//   }
+// }
+
+@media (max-width: 350px) {
+  .card-container {
+    width: 20rem;
+  }
+}

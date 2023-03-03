@@ -1,0 +1,17 @@
+.body-content {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5.875rem;
+  padding: 38px 0;
+  margin-bottom: 38px;
+}
+
+@media (max-width: 537px) {
+  .card-container {
+    gap: 2.375rem;
+  }
+}

@@ -1,0 +1,19 @@
+.btn {
+  width: 173px;
+  height: 58px;
+  border: none;
+  border-radius: var(--border-radius);
+  background: var(--button-background);
+
+  text-transform: uppercase;
+  color: var(--text-color-primary);
+  font-size: var(--button-label-size);
+  font-weight: var(--button-label-weight);
+
+  transition: background 0.4s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: var(--button-hover-background);
+}

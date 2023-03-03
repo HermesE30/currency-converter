@@ -1,10 +1,27 @@
 import { Component } from '@angular/core';
 
+import { ThemeService } from "src/app/theme/theme.service";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'currency-converter';
+
+export class AppComponent{
+  constructor(
+    private themeService: ThemeService
+  ) {}
+
+  toggleTheme() {
+    if (this.themeService.isDarkTheme()) {
+      this.themeService.setLightTheme();
+    } else {
+      this.themeService.setDarkTheme();
+    }
+  }
+
+  handleRefresh() {
+    console.log('app');
+    
+  }
 }

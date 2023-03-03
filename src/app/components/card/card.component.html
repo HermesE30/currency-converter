@@ -1,0 +1,25 @@
+<div class="card-container">
+  <div class="card-header">
+    <p class="card-title">{{card.title}}</p>
+  </div>
+  <div class="card-body">
+    <app-loader *ngIf="isLoading && !withoutData"></app-loader>
+    <div class="card-error" *ngIf="withoutData">
+      <p class="card-error-info">Algo deu errado</p>
+      <app-button (onClick)="receivedEvent()"></app-button>
+    </div>
+    <p class="card-currency-value" [class]="valueColor" *ngIf="!isLoading && !withoutData">
+      {{card.currency}}
+    </p>
+  </div>
+  <div class="card-footer" *ngIf="!isLoading && !withoutData">
+    <div class="card-footer-item-container">
+      <p class="footer-title">Variação (%)</p>
+      <p class="footer-value">-0,11</p>
+    </div>
+    <div class="card-footer-item-container">
+      <p class="footer-title">Atualizado</p>
+      <p class="footer-value">08:21:23</p>
+    </div>
+  </div>
+</div>

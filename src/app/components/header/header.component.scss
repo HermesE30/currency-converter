@@ -1,0 +1,11 @@
+.header {
+  width: 100vw;
+  min-height: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  background: var(--app-header-background);
+  box-shadow: var(--shadow);
+}
