@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Colors */
+  --app-background: #EEEEEE;
+  --app-header-background: #FFFFFF;
+  --card-background: #FFFFFF;
+  --card-header-background: #F6F6F6;
+  --button-background: #F6F6F6;
+
+  --text-color-primary: #717171;
+  --text-color-secondary: #919191;
+  --text-success: #3C7649;
+  --text-danger: #3684CB;
+  --text-info: #DD4B4B;
+
+  /* Shadows */
+  --shadow: 0px 0px 6px 2px rgba(204, 204, 204, 0.25);
+
+  /* fonts */
+  --card-title-size: 0.875rem;
+  --card-title-weight: 400;
+  --card-tilte-spacing: 0.25px;
+
+  --card-currency-value-size: 0.875rem;
+  --card-currency-value-weight: 400;
+  --card-currency-value-spacing: 0.25px;
+}
+
+body {
+  background: var(--app-background);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
