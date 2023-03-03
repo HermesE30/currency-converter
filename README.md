@@ -1,27 +1,40 @@
-# CurrencyConverter
+# Conversor de moedas para Real Brasileiro (BRL)
+Este projeto foi desenvolvido em Angular 15.2.1 e tem como objetivo mostrar
+a conversão de três moedas para Real Brasileiro (BRL) de forma automática.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+---
+## Requisitos
 
-## Development server
+- Mostrar a quantia equivalente de uma unidade de cada moeda abaixo em Real
+  Brasileiro (BRL):
+  - Dólar Canadense (CAD)
+  - Peso Argentino (ARS)
+  - Libra Esterlina (GBP)
+- Exibir a variação em porcentagem;
+- Exibir a hora da atualização;
+- Cache das informações no front-end por 3 minutos;
+- Atualização automática das informações a cada 3 minutos;
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## API
 
-## Code scaffolding
+A API utilizada é a da AwesomeAPI para buscar as informações:
+[AwesomeAPI](https://docs.awesomeapi.com.br/api-de-moedas);
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Como executar
 
-## Build
+1. Clone o repositório
+2. Execute `npm install` para instalar as dependências
+3. Execute `ng serve` para iniciar a aplicação
+4. Acesse `http://localhost:4200/` no seu navegador
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Como funciona
 
-## Running unit tests
+A aplicação faz uma chamada para a API da AwesomeAPI para obter as informações
+das moedas e as armazena em cache no front-end por 3 minutos. A cada 3 minutos
+a aplicação atualiza as informações automaticamente. As informações exibidas
+incluem a quantia equivalente de uma unidade de cada moeda em Real Brasileiro (BRL),
+a variação em porcentagem e a hora da atualização.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Autor
+Desenvolvido por Hermes Emmanuel.
