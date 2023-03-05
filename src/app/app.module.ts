@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 // router
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +24,8 @@ import { ButtonComponent } from './components/button/button.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

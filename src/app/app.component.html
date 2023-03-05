@@ -1,5 +1,12 @@
-<app-header></app-header>
-<div class="body-content">
-  <app-card *ngFor=" let data of adaptedData" [card]="data" [isLoading]="loading" [withoutData]="requestError"
-    (refreshRequest)="handleRefresh()"></app-card>
+<div class="layout" fxLayout="column">
+  <div class="layout-header" fxLayout="row" fxLayoutAlign="start center">
+    <app-header></app-header>
+  </div>
+  <div class="layout-content" fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start center"
+    fxLayoutAlign.gt-md="center center" fxLayoutGap="38px" fxLayoutGap.gt-md="94px" fxFlexOffset.lg="38px">
+    <div *ngFor=" let data of adaptedData">
+      <app-card [card]="data" [isLoading]="loading" [withoutData]="requestError"
+        (refreshRequest)="handleRefresh()"></app-card>
+    </div>
+  </div>
 </div>
