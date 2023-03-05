@@ -8,18 +8,18 @@ import { CardComponentProps } from './types';
 })
 
 export class CardComponent implements OnInit {
-  @Input() isLoading: boolean = false;
-  @Input() withoutData: boolean = false;
+  @Input() isLoading = false;
+  @Input() withoutData = false;
   @Input() card: CardComponentProps = {
     title: 'Card title',
-    currency: '1.001',
+    currency: '0',
     updateTime: '00:00:00',
-    variation: 0,
+    variation: '0',
   };
 
-  @Output() onRefreshRequest: EventEmitter<void> = new EventEmitter()
+  @Output() refreshRequest: EventEmitter<void> = new EventEmitter();
 
-  valueColor = 'card-currency-value-danger';
+  addColorClass = 'card-currency-value-danger';
 
   currencyExceedsBaseValue(currency: string, base: string): boolean {
     const parsedCurrency = parseFloat(currency);
@@ -41,17 +41,17 @@ export class CardComponent implements OnInit {
 
     return formatter.format(parsedCurrency);
   }
-  
+
 
   ngOnInit() {
-    if (this.currencyExceedsBaseValue(this.card.currency, '1')) this.valueColor = 'card-currency-value-success';
-    if (this.currencyExceedsBaseValue(this.card.currency, '5') ) this.valueColor = 'card-currency-value-info';
-    
+    if (this.currencyExceedsBaseValue(this.card.currency, '1')) this.addColorClass = 'card-currency-value-success';
+    if (this.currencyExceedsBaseValue(this.card.currency, '5')) this.addColorClass = 'card-currency-value-info';
+
     this.card.currency = this.numberToMoney(this.card.currency);
   }
-  
+
   receivedEvent() {
-    if(this.onRefreshRequest) this.onRefreshRequest.emit();
+    if (this.refreshRequest) this.refreshRequest.emit();
   }
 
 }

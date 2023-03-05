@@ -1,6 +1,6 @@
 export interface CardComponentProps {
   title: string;
   currency: string;
-  variation?: number;
-  updateTime?: string;
+  variation: string;
+  updateTime: string;
 }

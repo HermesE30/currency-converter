@@ -1,6 +1,5 @@
 <app-header></app-header>
 <div class="body-content">
-  <app-card (onRefreshRequest)="handleRefresh()"></app-card>
-  <app-card (onRefreshRequest)="handleRefresh()"></app-card>
-  <app-card (onRefreshRequest)="handleRefresh()"></app-card>
+  <app-card *ngFor=" let data of adaptedData" [card]="data" [isLoading]="loading" [withoutData]="requestError"
+    (refreshRequest)="handleRefresh()"></app-card>
 </div>

@@ -27,7 +27,6 @@
   color: var(--text-color-primary);
 }
 
-
 .card-body {
   width: 100%;
   flex: 1;
@@ -105,12 +104,6 @@
   font-size: var(--card-error-title-size);
   font-weight: var(--card-error-title-weight);
 }
-
-// @media (max-width: 537px) {
-//   .card-container {
-//     width: 20rem;
-//   }
-// }
 
 @media (max-width: 350px) {
   .card-container {

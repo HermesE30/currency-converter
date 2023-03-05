@@ -3,23 +3,23 @@
     <p class="card-title">{{card.title}}</p>
   </div>
   <div class="card-body">
-    <app-loader *ngIf="isLoading && !withoutData"></app-loader>
+    <app-loader *ngIf="isLoading && !withoutData" />
     <div class="card-error" *ngIf="withoutData">
       <p class="card-error-info">Algo deu errado</p>
-      <app-button (onClick)="receivedEvent()"></app-button>
+      <app-button (onClick)="receivedEvent()" [label]="'Recarregar'" />
     </div>
-    <p class="card-currency-value" [class]="valueColor" *ngIf="!isLoading && !withoutData">
+    <p class="card-currency-value" [class]="addColorClass" *ngIf="!isLoading && !withoutData">
       {{card.currency}}
     </p>
   </div>
   <div class="card-footer" *ngIf="!isLoading && !withoutData">
     <div class="card-footer-item-container">
       <p class="footer-title">Variação (%)</p>
-      <p class="footer-value">-0,11</p>
+      <p class="footer-value">{{card.variation}}</p>
     </div>
     <div class="card-footer-item-container">
       <p class="footer-title">Atualizado</p>
-      <p class="footer-value">08:21:23</p>
+      <p class="footer-value">{{card.updateTime}}</p>
     </div>
   </div>
 </div>
