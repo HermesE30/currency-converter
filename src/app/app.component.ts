@@ -19,8 +19,9 @@ export class AppComponent implements OnInit {
     { title: 'Peso Argentino', currency: '', updateTime: '', variation: '' },
     { title: 'Libra Esterlina', currency: '', updateTime: '', variation: '' },
   ];
-  
+  // fixed
   currencies: string[] = ['CAD-BRL', 'ARS-BRL', 'GBP-BRL'];
+  // initial data
   adaptedData: CardComponentProps[] = this.initialData;
 
   loading = false;
