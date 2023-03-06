@@ -6,7 +6,7 @@
     <app-loader *ngIf="isLoading && !withoutData" />
     <div class="card-error" *ngIf="withoutData">
       <p class="card-error-info">Algo deu errado</p>
-      <app-button (onClick)="receivedEvent()" [label]="'Recarregar'" />
+      <app-button (buttonClick)="receivedEvent()" [label]="'Recarregar'" />
     </div>
     <p class="card-currency-value" [class]="addColorClass" *ngIf="!isLoading && !withoutData">
       {{card.currency}}

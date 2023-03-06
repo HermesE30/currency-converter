@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
     // clear store
     if (clearStore) this.store.clearData();
     // create request
-    this.currencyService.last(this.currencies).then((curr: CardComponentProps[]) => {
+    this.currencyService.lastOccurrence(this.currencies).then((curr: CardComponentProps[]) => {
       this.adaptedData = curr;
     }).catch(() => {
       this.requestError = true;

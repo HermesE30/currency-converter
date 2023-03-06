@@ -25,11 +25,11 @@ export class CurrencyService {
     return Object.keys(storeData).length === 0;
   }
 
-  last(currencies: string[]): Promise<CardComponentProps[]> {
+  lastOccurrence(currencies: string[]): Promise<CardComponentProps[]> {
     if (this.isStoreEmpty(this.store.getData(this.storeKey))) {
-      console.log('whithout cache');
-      // create paath
+      // 
       const curr: string = currencies.join(',');
+      // create paath
       const path = `/${curr}`;
       // create get request
       return new Promise((resolve, reject) => {
@@ -38,12 +38,11 @@ export class CurrencyService {
         // request
         client.get(path).then((resp) => {
           const { data } = resp;
-          resolve(this.adaptData(data));
+          resolve(this.dataAdapter(data));
         }).catch((e) => reject(e));
       });
     }
 
-    console.log('whith cache');
     return new Promise((resolve, reject) => {
       const data = this.store.getData(this.storeKey);
       if (data) resolve(data);
@@ -52,7 +51,7 @@ export class CurrencyService {
 
   }
 
-  adaptData(obj: CurrencyProps): CardComponentProps[] {
+  dataAdapter(obj: CurrencyProps): CardComponentProps[] {
     const newData: CardComponentProps[] = this.objectToArray(obj).map((c) => ({
       title: c.name.split('/')[0],
       currency: c.low,
