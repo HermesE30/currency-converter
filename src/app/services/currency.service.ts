@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
+import * as moment from 'moment';
+// interface
 import { Currency } from '../interfaces/currency';
+// components
+import { CardComponentProps } from '../components/card/types';
+// service
 import { ClientService } from './client.service';
 import { LocalService } from './local.service';
-import { CardComponentProps } from '../components/card/types';
-import * as moment from 'moment';
 
 export type CurrencyProps = { [key: string]: Currency }
 

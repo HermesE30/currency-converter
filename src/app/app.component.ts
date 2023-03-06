@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
-import { ThemeService } from "src/app/theme/theme.service";
-import { CurrencyProps, CurrencyService } from './services/currency.service';
-import { Currency } from './interfaces/currency';
-import { CardComponentProps } from './components/card/types';
 import { interval } from 'rxjs';
-import * as moment from 'moment';
+// component
+import { CardComponentProps } from './components/card/types';
+// services
+import { ThemeService } from "./theme/theme.service";
+import { CurrencyService } from './services/currency.service';
 import { LocalService } from './services/local.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

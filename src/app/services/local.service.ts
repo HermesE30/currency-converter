@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+// componets props
 import { CardComponentProps } from '../components/card/types';
 
 @Injectable({
