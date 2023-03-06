@@ -10,10 +10,14 @@ a conversão de três moedas para Real Brasileiro (BRL) de forma automática.
   - Dólar Canadense (CAD)
   - Peso Argentino (ARS)
   - Libra Esterlina (GBP)
-- Exibir a variação em porcentagem;
-- Exibir a hora da atualização;
-- Cache das informações no front-end por 3 minutos;
-- Atualização automática das informações a cada 3 minutos;
+- Visualizar a variação em porcentagem;
+- Visualizar a hora da atualização;
+- Manter cache das informações no front-end por 3 minutos;
+- Atualizar automaticamente as informações a cada 3 minutos;
+- Apresentar valores menores ou igual a R$1,00 em vermelho;
+- Apresentar valores maiores que R$1,00 e menores ou igual a R$5,00 em verde;
+- Apresentar valores maiores que R$5,00 em azul;
+
 
 ## API
 
